@@ -192,6 +192,7 @@ class _LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
         ? Text(
             controller.text,
             softWrap: true,
+            style: Theme.of(context).textTheme.subhead
           )
         : Text(
             widget.hint ?? '',
@@ -201,7 +202,7 @@ class _LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
     Widget child = Row(
       children: <Widget>[
         widget.leading ?? SizedBox(),
-        SizedBox(
+        if (widget.leading != null) SizedBox(
           width: 16.0,
         ),
         Expanded(
@@ -224,6 +225,7 @@ class _LocationAutocompleteFieldState extends State<PlacesAutocompleteField> {
     if (widget.inputDecoration != null) {
       child = InputDecorator(
         decoration: widget.inputDecoration,
+        isEmpty: controller.text.isEmpty && widget.hint == null,
         child: child,
       );
     }
