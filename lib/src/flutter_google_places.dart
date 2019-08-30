@@ -247,13 +247,14 @@ class _AppBarPlacesAutoCompleteTextFieldState
 
     return Container(
         alignment: Alignment.topLeft,
-        margin: EdgeInsets.only(top: 6.0),
+        margin: EdgeInsets.only(top: 5.0),
         child: TextField(
+          cursorColor: Colors.white,
           controller: state._queryTextController,
           autofocus: true,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 16.0,
+            fontSize: 20.0,
           ),
           decoration: InputDecoration(
 /*
