@@ -222,7 +222,7 @@ class _PlacesAutocompleteResult extends State<PlacesAutocompleteResult> {
       if (state._searching) {
         children.add(_Loader());
       }
-      children.add(widget.logo ?? PoweredByGoogleImage());
+//      children.add(widget.logo ?? PoweredByGoogleImage());
       return Stack(children: children);
     }
     return PredictionsListView(
@@ -247,7 +247,7 @@ class _AppBarPlacesAutoCompleteTextFieldState
 
     return Container(
         alignment: Alignment.topLeft,
-        margin: EdgeInsets.only(top: 4.0),
+        margin: EdgeInsets.only(top: 6.0),
         child: TextField(
           controller: state._queryTextController,
           autofocus: true,
